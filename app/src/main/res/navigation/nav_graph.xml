@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.claffey.carefinder.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_hospitalListFragment"
+            app:destination="@id/hospitalListFragment" />
+    </fragment>
+
+    <navigation
+        android:id="@+id/navigation_login"
+        app:startDestination="@id/loginFragment" >
+        <fragment
+            android:id="@+id/loginFragment"
+            android:name="com.claffey.carefinder.ui.login.LoginFragment"
+            android:label="Login"
+            tools:layout="@layout/fragment_login">
+            <action
+                android:id="@+id/action_loginFragment_to_registerFragment"
+                app:destination="@id/registerFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/registerFragment"
+            android:name="com.claffey.carefinder.ui.login.RegisterFragment"
+            android:label="Focus Racine"
+            tools:layout="@layout/fragment_register"/>
+        <action
+            android:id="@+id/action_navigation_login_pop"
+            app:popUpTo="@id/navigation_login"
+            app:popUpToInclusive="true" />
+    </navigation>
+
+    <action
+        android:id="@+id/action_global_navigation_login"
+        app:destination="@id/navigation_login"
+        app:popUpTo="@+id/navigation_home"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/hospitalListFragment"
+        android:name="com.claffey.carefinder.ui.ListView.HospitalListFragment"
+        android:label="HospitalListFragment" >
+        <action
+            android:id="@+id/action_hospitalListFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+</navigation>

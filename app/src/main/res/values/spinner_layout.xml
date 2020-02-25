@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="endPoint_array">
+        <item></item>
+        <item>All</item>
+        <item>City</item>
+        <item>State</item>
+        <item>Zip</item>
+        <item>County</item>
+        <item>Name</item>
+        <item>Pid</item>
+        <item>id</item>
+        <item>Emergency</item>
+    </string-array>
+</resources>

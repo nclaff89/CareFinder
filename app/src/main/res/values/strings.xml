@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CareFinder</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="enter_search_criteria">Please Enter Search Criteria</string>
+    <string name="enter_key_word">Enter Keyword to Search</string>
+    <string name="search">Search</string>
+</resources>
